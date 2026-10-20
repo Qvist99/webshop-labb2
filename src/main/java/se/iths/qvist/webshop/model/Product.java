@@ -23,7 +23,7 @@ public class Product {
 
         String articleNumber = parts[0];
         String title = parts[1];
-        // Need to fail-safe later to make sure it actually returns an double.
+        // Need to fail-safe later to make sure it actually returns a double.
         double price = Double.parseDouble(parts[2]);
         String description = parts[3];
 
@@ -65,5 +65,10 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public String toString() {
+        return "Article number: " + articleNumber + " Title: " + title + " Price: " + price + " Description: " + description;
     }
 }

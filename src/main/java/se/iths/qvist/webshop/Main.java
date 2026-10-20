@@ -4,6 +4,9 @@ package se.iths.qvist.webshop;
 public class Main {
     static void main() {
         ProductFileStorage productFileStorage = new ProductFileStorage();
-        WebShopManager webShopManager = new WebShopManager(productFileStorage);
+        OutInputHandler consoleOutInputHandler = new ConsoleOutInputHandler();
+        WebShopManager webShopManager = new WebShopManager(productFileStorage, consoleOutInputHandler);
+
+        webShopManager.startWebshop();
     }
 }
